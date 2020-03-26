@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="email=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="renderer" content="webkit">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <title>[简历]严谨-{{.Post}}</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/typo.css">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+<!--    <script>
+        function loading() {
+            document.getElementsByClassName('avatar')[0].style.display = 'block';
+            document.getElementsByClassName('loading')[0].style.display = 'none';
+        }
+    </script>-->
+
+    <script>
+        $(function() {
+            $('.collect-btn').ready(function() {
+                $('.dp-model-alert').show().delay(1000).hide(200);//1000 表示展示1秒后消失
+            })
+            $('.right-close-alert').click(function() {
+                $('.dp-model-alert').hide()
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+<div><div></div>
+    <header class="header"></header>
+
+    <article class="container">
+        <section class="side" id="side">
+
+            <!-- 左栏固定开关，记得及时删除这段代码 Start-->
+<!--            <label class="switch" style="display: none;" onchange="switchFixed()">
+                <script type="text/javaScript">
+                    function switchFixed(){
+                        var value = document.getElementById('side').style.position === 'fixed' ? 'absolute' : 'fixed';
+                        document.getElementById('side').style.position = value;
+                    }
+                </script>
+                <input id="cb" type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <style>
+                @media (min-width: 	750px){
+                    .switch{position:relative;display:inline-block!important;width:60px;height:34px;}
+                    .switch input{display:none;}
+                    .slider{position:absolute;cursor:pointer;top:0;left:0;right:0;bottom:0;background-color:#ccc;-webkit-transition:.4s;transition:.4s;}
+                    .slider:before{position:absolute;content:"";height:26px;width:26px;left:4px;bottom:4px;background-color:white;-webkit-transition:.4s;transition:.4s;}
+                    input:checked + .slider{background-color:#1abc9c;}
+                    input:focus + .slider{box-shadow:0 0 1px #1abc9c;}
+                    input:checked + .slider:before{-webkit-transform:translateX(26px);-ms-transform:translateX(26px);transform:translateX(26px);}.slider.round{border-radius:34px;}
+                    .slider.round:before{border-radius:50%;}
+                }
+            </style>-->
+            <!-- 左侧固定开关，记得及时删除这段代码 End-->
+
+            <!-- 个人肖像 -->
+            <section class="me">
+                <section class="portrait">
+<!--                    <div class="loading">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>-->
+                    <!-- 头像照片 -->
+                    <img class="avatar" src="assets/images/avatar.jpg" width="100%" >
+                </section>
+
+                <h1 class="name">严谨</h1>
+                <h4 class="info-job">{{.Post}}</h4>
+
+            </section>
+
+            <!-- 基本信息 -->
+            <section class="profile info-unit">
+                <h2>
+                    <i class="fa fa-user" aria-hidden="true"></i>基本信息</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>个人信息</label>
+                        <span>严谨 / 男 / 25岁</span>
+                    </li>
+                    <li>
+                        <label>英语水平</label>
+                        <span>CET-6 520'</span>
+                    </li>
+<!--                    <li>
+                        <label>计算机水平</label>
+                        <span>软考中级</span>
+                    </li>-->
+                </ul>
+            </section>
+
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>求职意愿</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label>岗位</label><span style="padding-left: 20px">{{.Post}}</span>
+                    </li>
+                    <li>
+                        <label>地点</label><span style="padding-left: 20px">不限</span>
+                    </li>
+                    <li>
+                        <label>时间</label><span style="padding-left: 20px">4+天/周</span>
+                    </li>
+                </ul>
+            </section>
+
+
+            <!-- 技能点 -->
+            <section class="skill info-unit">
+                <h2>
+                    <i class="fa fa-code" aria-hidden="true"></i>技能点</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label class="skillx">Go</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx">C++</label>
+                        <progress value="80" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx">Python</label>
+                        <progress value="70" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx" >SQL  </label>
+                        <progress value="65" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx">Linux</label>
+                        <progress value="65" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx">Matlab</label>
+                        <progress value="60" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx">Html</label>
+                        <progress value="50" max="100"></progress>
+                    </li>
+                    <li>
+                        <label class="skillx">CSS</label>
+                        <progress value="50" max="100"></progress>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 联系方式 -->
+            <section class="contact info-unit">
+                <h2>
+                    <i class="fa fa-phone" aria-hidden="true"></i>联系方式</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <label class="contact">手机</label>
+                        <a href="tel:18584836763" target="_blank"><span style="padding-left: 20px">185-8483-6763</span></a>
+                    </li>
+                    <li>
+                        <label class="contact">邮箱</label>
+                        <a href="Cyan1956@163.com" target="_blank"><span style="padding-left: 20px">Cyan1956@163.com</span></a>
+                    </li>
+                    <li>
+                        <label class="contact">博客</label>
+                        <a href="https://blog.csdn.net/Cyan1956" target="_blank"><span style="padding-left: 20px">https://blog.csdn.net/Cyan1956</span></a>
+                    </li>
+                    <li>
+                        <label class="contact">Github</label>
+                        <a href="https://github.com/Cyan95" target="_blank"><span style="padding-left:6px">https://github.com/Cyan95</span></a>
+                    </li>
+                </ul>
+            </section>
+
+
+            <section class="qrcode info-unit">
+                <h2><i class="fa fa-qrcode" aria-hidden="true"></i>二维码</h2>
+                <hr/>
+                <div align="center">
+                <img src="assets/images/qrcode.png" style="width: 60%" alt="">
+                </div>
+            </section>
+
+
+        </section>
+        <section class="main">
+
+            <!-- 教育经历 -->
+            <section class="edu info-unit">
+                <h2>
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>教育经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>电子科技大学 - 航空航天学院 - 硕士在读</span>
+                            <time>2018.9-2021.7</time>
+                        </h3>
+                        <p>专业排名
+                            GPA<mark>3.47/4.00</mark>，综合排名<mark>No.11/56</mark>，荣获<b>一等学业奖学金</b><br>
+                            与研会伙伴团结协作，工作认真负责，被评为优秀研究生干部
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 技术栈 -->
+            <div class="stack info-unit">
+                <h2><i class="fa fa-code" aria-hidden="true"></i>技术栈</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <span>熟悉Golang/C++/Python等多种程序设计</span>
+                    </li>
+                    <li>
+                        <span>对操作系统原理，计算机网络，存储有一定理解</span>
+                    </li>
+                    <li>
+                        <span>了解常用数据结构和算法</span>
+                    </li>
+                    <li>
+                        <span>热爱编程，掌握初步的系统问题分析和排查能力</span>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <!-- 工作经历 -->
+            <!--<section class="work info-unit">
+                <h2>
+                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>工作经历</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>[经历1]XX公司－前端开发工程师（实习）</span>
+                            <time>2016.X 至 2017.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与XX项目迭代XX的前端开发工作，独立承担并完成XX、XX、XXXX等功能点的开发，主要维护并修复XX、XX、XX等功能点bug若干。项目采用技术栈
+                                <mark>React+React Router+Node.js+SASS</mark>，实现
+                                <mark>前后端完全分离</mark>。</li>
+                            <li>配合UI和后端，根据产品需求提供H5页面嵌入到后台模板，要求
+                                <mark>移动端显示正常</mark>。</li>
+                            <li>主要参与XXXXXXX的静态页面开发工作，要求
+                                <mark>在支付宝环境下完全兼容</mark>。</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[经历2]XX－前端开发工程师（实习）</span>
+                            <time>20XX.10-20XX.7</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>深度参与公司主线产品「XXXX」的前端开发工作，完成帖子快捷回复、
+                                <mark>全站图片懒加载</mark>、活动banner、帖子管理（使用Yii框架）等功能。项目采用技术栈phpWind+NAMP。
+                                <a href="http://itsay.tech/162/" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。</li>
+                            <li>主要参与公司产品「XXXX」的前端开发工作，实现接入微博、微信、QQ等
+                                <mark>第三方账号登录</mark>等功能。项目采用技术栈WordPress+NAMP。</li>
+                            <li>活动页面的开发（七夕活动、抽奖活动以及承接外包页面）。</li>
+                            <li>论坛
+                                <mark>图片增量备份</mark>（CentOS+vsftpd+crontab）
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-link" aria-hidden="true"></i>博客文章</a>。</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>-->
+
+            <!-- 项目经验 -->
+            <section class="project info-unit">
+                <h2>
+                    <i class="fa fa-terminal" aria-hidden="true"></i>个人项目</h2>
+                <hr/>
+                <ul>
+                    <li>
+                        <h3>
+                            <span>[项目1]基于Go实现线上书城</span>
+                            <span class="link">
+                                <a href="#" target="_blank">Demo</a>
+                            </span>
+                            <time>2020.2-2020.3</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Golang+Docker+Mysql</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现线上书城
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]
+                                分布式mysql保障用户和商品信息安全性<br>
+                                基于Session的用户登录方案<br>
+                                基于ajax实现页面的数据刷新<br>
+                                多重流量拦截，减小数据库压力<br>
+                                {{/*通过网页静态化，分布式（未部署）提高网站性能<br>*/}}
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]实现登录浏览购物下单完整可用的线上书城</li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3>
+                            <span>[项目2]个人线上简历</span>
+                            <time>2019.9-2021.6</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Golang+Mysql+docker</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]个人简历上云
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]根据post请求区分
+                                RabbitMQ构造秒杀队列实现流量削峰,保护数据库<br>
+                                <mark>D3.js</mark> 和
+                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析 功能
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目2]个人网盘</span>
+                            <time>2019.9-2021.6</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Golang+Mysql+Redis</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]个人简历上云
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]基于token的用户登录凭证
+                                利用docker实现mysql一主一从分布式存储架构<br>
+                                基于sha1的文件唯一标识<br>
+                                利用Redis记录文件分块传输状态<br>
+                                RabbitMQ构造秒杀队列实现流量削峰,保护数据库<br>
+                                <mark>D3.js</mark> 和
+                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析 功能
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]支持分块上传和秒传
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目2]网络流量分类及其可视化</span>
+                            <time>2019.9-2021.6</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：Python+Scapy+TensorFlow</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现网络流量的实时嗅探和分类，以及分类结果的实时可视化
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 3 位同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，清洗并整理相关数据(扩展第三方知识组织系统和 Google trends 数据)，并用
+                                <mark>D3.js</mark> 和
+                                <mark>ECharts</mark> 进行图形化展示以及实现简易自动分析 功能
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品取得第二届共享杯国家级竞赛“特等奖”(1/1500)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目3]未来无人机大赛</span>
+                            <time>2019.3-2019.6</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]农业无人机的改进与优化
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 4 位同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]分析项目需求，收集并整理相关论文，撰写技术创新部分章节，编写PPT并代表队伍答辩
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]作品创新型取得评委老师肯定并获奖
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目4]SDN网络仿真</span>
+                            <time>2018.6-2018.9</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>技术栈：WireShark+Mininet</li>
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]实现常见网络拓扑的仿真实现及可视化展示、数据透视及分析
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 3 位同学
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]利用<mark>WireShark</mark>抓包分析Openflow协议流量包在SDN网络中的转发过程
+                                <br/>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>
+                            <span>[项目5]申报组织Simutools2019国际会议</span>
+                            <time>201X.X-201X.X</time>
+                        </h3>
+                        <ul class="info-content">
+                            <li>
+                                <i class="fa fa-paper-plane-o" aria-hidden="true"></i>
+                                [目标]确保Simutools2019国际会议顺利召开
+                                <br/>
+                                <i class="fa fa-users" aria-hidden="true"></i>
+                                [团队]与 3 位
+                                <br/>
+                                <i class="fa fa-bars" aria-hidden="true"></i>
+                                [贡献]沟通各方，申报会议，邀请参会
+                                <br/>
+                                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                                [效果]Simutools2019顺利召开，89位专家学者与会
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 自我评价 -->
+            <section class="work info-unit">
+
+
+                <h2>
+                    <i class="fa fa-pencil" aria-hidden="true"></i>自我评价/期望</h2>
+                <hr/>
+<div style="padding:0 40px">
+                <p><b>乐于学习，永远好奇。</b><br>
+                    想成为强力的单兵，也想成为能鼓舞队友的伙伴。<br>
+                    未来一定会有一款改变世界的产品刻着我的名字。<br>
+                </p>
+</div>
+            </section>
+        </section>
+    </article>
+
+
+
+    <footer class="footer">
+        <p>© 2019 严谨 最后更新于
+            <time>2020年03月03日</time>.</p>
+    </footer>
+
+    <!-- 侧栏 -->
+    <aside>
+        <ul>
+            <li>
+                <a href="https://github.com/Cyan95" target="_blank">Github</a>
+            </li>
+            <li>
+                <a href="https://blog.csdn.net/Cyan1956" target="_blank">Blog</a>
+            </li>
+        </ul>
+    </aside>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
